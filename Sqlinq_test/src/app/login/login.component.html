@@ -1,0 +1,17 @@
+   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" onkeydown="return event.key != 'Enter';">
+    <div *ngIf="loginForm.get('email')?.invalid">
+      <div *ngIf="loginForm.get('email')?.errors?.['required']">Email is required.</div>
+      <div *ngIf="loginForm.get('email')?.errors?.['pattern'] || loginForm.get('email')?.errors?.['email']">Please enter a valid email address.</div>
+    </div>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password"   autocomplete="new-password" (input)="checkValidaation()" formControlName="password" onkeydown="return event.key != 'Enter';" required >
+        <div *ngIf="loginForm.get('password')?.errors?.['required']">Password is required.</div>
+        <div *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at least 8 characters long.</div>
+        <div *ngIf="!digit || !lowercaseLetter || !upercaseLetter">Password must contain at least one number, one lowercase letter, and one uppercase letter.</div>
+        <div *ngIf="Hebrew">Password must not contain Hebrew letters</div>
+        <button  type="submit" [disabled]="(loginForm.invalid && Hebrew==true) || loading ">{{ loading ? 'Loading...' : 'Submit' }}</button>
+  </form>
+  

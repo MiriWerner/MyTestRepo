@@ -1,0 +1,38 @@
+  .red-background {
+    background-color: red;
+  }
+  
+  .green-background {
+    background-color: green;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .card div {
+    margin-bottom: 10px;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card strong {
+    color: #4a5568;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  
+  
+  

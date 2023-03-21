@@ -1,0 +1,21 @@
+.mat-select-trigger {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 120px;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .mat-select-panel {
+    margin-top: 0;
+  }
+  .red-background {
+    background-color: red;
+  }
+  
+  .green-background {
+    background-color: green;
+  }
+  
