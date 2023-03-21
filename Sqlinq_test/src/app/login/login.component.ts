@@ -35,9 +35,16 @@ export class LoginComponent {
     if (email && password) {
       this.loginService.login(email, password).subscribe(
         response => {
-          this.loading = false;
-          this.router.navigate(['/info']);
-          console.log(response);
+          if(response.user!=null){
+            this.loading = false;
+            this.router.navigate(['/info']);
+            console.log(response);
+          }
+          else{
+            this.loading = false;
+            alert('details are incorrect!');
+          }
+         
         },
         error => {
           this.loading = false;
